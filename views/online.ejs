@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html lang="en" dir="rtl" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/scan.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <title>الاجتماعات الاونلاين  </title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar" aria-label="Twelfth navbar example">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../public/image/logo.png"
+            height="60"
+            alt="Logo"
+            loading="lazy"
+          />
+        </a>
+        <button class="navbar-toggler rigght-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse custom-options shift" id="navbarsExample10">
+          <ul class="navbar-nav" dir="rtl">
+            <li class="nav-item ">
+              <a class="nav-link" href="/attendance" >احداث الفرع</a>
+            </li>
+            <li class="nav-item active" >
+              <a class="nav-link" href="/online">الاجتماعات الاونلاين</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container content">
+      <div class="online-tab px-4 py-3 my-4 text-center">
+        
+        <div class="div2">
+          <form action="" method="post">
+            <div class="mb-3">
+              <label for="meeting" class="form-label"></label>
+              <select class="form-select team-select" aria-label="Default select example"   name ="team" required>
+                
+                <option selected value="">تحديد  الفريق  </option>
+                <option value="1"> الفريق 1</option>
+                <option value="2"> الفريق 2</option>
+                <option value="3"> 3 الفريق</option>
+                <option value="4"> الفريق 4</option>
+                <option value="5"> الفريق 5</option>
+              </select> 
+            </div>
+            <div class="mb-3 tainee">
+              <label for="meeting" class="form-label"></label>
+              <select class="form-select trainee-select" aria-label="Default select example"   name ="code" required>
+                <option selected value="">اختار المتدرب    </option>
+               
+              </select> 
+            </div> 
+            <div class="mb-3 time-class">
+                <label for="time" class="form-label">وقت التاخير بالدقائق</label>
+                <input type="number" class="form-control" id="time" placeholder="50 " name ="time" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="meeting" class="form-label"></label>
+              <select class="form-select" aria-label="Default select example" id="meeting" name ="meeting" required>
+                <option selected value="">تحديد  الاجتماع </option>
+                <% for(var i=0; i<online.length ; i++) { %>
+                  <option value="<%= i+2 %>" >
+                  <%= online[i] %>
+                  </option>
+                <% } %>
+                
+              </select> 
+            </div>
+            <!-- <button type="button" onClick="addnew()"  class="btn btn-secondary">اضافة متدرب</button> -->
+            <!-- <input type="hidden" name="table" id = "hiddeninput"> -->
+            <button type="submit" class="btn btn-primary">تسجيل الحضور</button>    
+          </form>
+          
+          
+        </div>
+        <!-- <div class="div1" >
+          <table class="table">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">code</th>
+                <th scope="col">time</th>
+                <th scope="col">meeting</th>
+              </tr>
+          </table>
+        </div> -->
+      </div>  
+    </div>
+      <script src="../public/js/bootstrap.bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="../public/js/main.js"></script>   
+
+  </body>
+</html>

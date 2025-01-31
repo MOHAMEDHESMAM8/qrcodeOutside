@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/styles/error.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <div class="box-form">
+        <div class="overlay">
+            <div class="err-right">
+                <h1>⚠️ Oops!</h1>
+            </div>
+            <div class="err-left">
+                <div class="err-container">
+                    <h1>Error</h1>
+                    <p class="err-message"><%- message %></p>
+
+                    <div class="err-inputs">
+                        <button onclick="window.location.href='/attendance'">Go Back Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

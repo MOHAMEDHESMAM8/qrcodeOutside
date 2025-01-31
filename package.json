@@ -1,0 +1,28 @@
+{
+  "name": "video-request",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify-lambda npm install",
+    "start": "netlify-lambda nodemon index.js",
+     "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.4",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.18.2",
+    "google-spreadsheet": "^3.3.0",
+    "googleapis": "^67.1.0",
+    "html-table-to-json": "^1.0.0",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

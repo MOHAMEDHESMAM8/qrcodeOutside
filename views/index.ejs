@@ -1,0 +1,81 @@
+<!DOCTYPE html >
+<html lang="en" dir="rtl" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/scan.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <title>حضور المتدربين</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar" aria-label="Twelfth navbar example">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="#">
+          <img
+            src="../public/image/logo.png"
+            height="60"
+            alt="Logo"
+            loading="lazy"
+          />
+        </a> -->
+        <button class="navbar-toggler rigght-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse custom-options shift" id="navbarsExample10">
+          <ul class="navbar-nav" dir="rtl">
+            <li class="nav-item active">
+              <a class="nav-link" href="/attendance" >احداث الفرع</a>
+            </li>
+            <!-- <li class="nav-item" >
+              <a class="nav-link" href="/online">الاجتماعات الاونلاين</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container content">
+      <div class="offline-tab">
+        <main class="main_container">
+    <!-- <script src="../public/js/scan.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+         
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <div id="reader" class="reader_container"></div>
+            <div class="px-4 py-3 my-4 text-center qr-form" dir="rtl">
+              <form action="" method="POST">  
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"></label>
+                 
+                  <select class="form-select" aria-label="Default select example" name="event" required>
+                    <option selected value="">تحديد الحدث</option>
+                     <% for(var i=0; i<month.length ; i++) { %>
+                      <option value="<%= i+2 %>" >
+                      <%= month[i] %>
+                      </option>
+                     <% } %>
+                  </select> 
+                </div>
+                <div class="mb-3">
+                <input type="number"  name="time" class="input-field" placeholder="وقت التاخير بالدقائق"required>
+                </div>
+                <input type="hidden"  name="json_input" id ="json_input" readonly class="input-field" >
+                <div class="mb-3">
+                <input type="text"  id ="traineename"  class="input-field" placeholder="الاسم" required>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" id ='idButton' class="w-40 btn btn-md btn-primary">تسجيل الحضور</button>
+                </div>
+              </form>
+            </div>
+        </main>
+        <div class="gif">
+          <img src="../public/image/giphy.gif" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+      <script src="../public/js/bootstrap.bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script src="../public/js/main.js"></script>   
+
+  </body>
+</html>

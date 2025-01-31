@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="box-form">
+  <!-- <img src="../public/image/logo.png" alt="" srcset=""> -->
+  <div class="overlay">
+          <div class="right">
+            <h1> حضور  التدريب </h1>
+            <p> ما بعد الاساس ..   الاستمرار على النـجاح</p>
+          </div>
+          <div class="left">
+            <div class="left-content">
+                <h1>تسجيل الدخول</h1>
+                <form action="" method="POST">
+                  <div class="inputs">
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" id="floatingInput"  name="username"placeholder="name@example.com">
+                      <label for="floatingInput">الاسم</label>
+                    </div>
+                    <div class="form-floating ">
+                      <input type="password" class="form-control" id="floatingInput"name="userpassword" placeholder="name@example.com">
+                      <label for="floatingInput">الرقم السري</label>
+                    </div>
+                    <p class="error" ><%= error %></p>
+                    <button type="submit" class="btn btn-primary btn-lg" >تسجيل الدخول</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+  </div>
+ 
+	
+</div>
+<!-- partial -->
+  
+</body>
+</html>
