@@ -17,8 +17,9 @@ const { table } = require("console");
 const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.get("/attendance", async(req, res) => {
-  
+app.get("/attendanc e", async(req, res) => {
+const path = require('path');
+const creds = require(path.join(__dirname, 'credentials.json'));
   if(!req.cookies.month){
       const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
