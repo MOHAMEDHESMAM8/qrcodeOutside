@@ -9,7 +9,6 @@
             "views/**",
             "public/**",
             "credentials.json"
-
           ]
         }
       }
@@ -17,7 +16,11 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "/index.js"
       }
-    ]
+    ],
+    "env": {
+      "PORT": "1337",
+      "NODE_ENV": "production"
+    }
   }
