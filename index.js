@@ -18,7 +18,6 @@ const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const path = require('path');
 const creds = require(path.join(__dirname, 'credentials.json'));
 
 
