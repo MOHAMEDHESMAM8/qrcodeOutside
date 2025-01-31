@@ -14,7 +14,8 @@ const { testing } = require("googleapis/build/src/apis/testing");
 const { cp } = require("fs");
 app.use(cookieParser())
 const { table } = require("console");
- 
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
 
 app.get("/attendance", async(req, res) => {
   
