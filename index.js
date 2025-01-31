@@ -17,12 +17,16 @@ const { table } = require("console");
 const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.get("/attendanc e", async(req, res) => {
+
 const path = require('path');
 const creds = require(path.join(__dirname, 'credentials.json'));
+
+
+app.get("/attendanc e", async(req, res) => {
+
   if(!req.cookies.month){
       const auth = new google.auth.GoogleAuth({
-        keyFile: "credentials.json",
+        credentials: creds,
         scopes: "https://www.googleapis.com/auth/spreadsheets",
       });
       // Create client instance for auth
